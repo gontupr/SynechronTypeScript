@@ -1,0 +1,1 @@
+{"version":3,"file":"arrow-functions.js","sourceRoot":"","sources":["../../basics/arrow-functions.ts"],"names":[],"mappings":"AAAA,IAAI,QAAQ,GAAG;IACX,UAAU,EAAC,IAAI;IACf,WAAW,EAAC,SAAS;IACrB,IAAI,EAAC,QAAQ;IACb,sBAAsB,EAAC;QAAA,iBAGtB;QAFG,UAAU,CAAC;YACP,OAAO,CAAC,GAAG,CAAC,oBAAkB,KAAI,CAAC,UAAY,CAAC,CAAA;QAAE,CAAC,EAAC,IAAI,CAAC,CAAA;IACjE,CAAC;CACJ,CAAA"}
