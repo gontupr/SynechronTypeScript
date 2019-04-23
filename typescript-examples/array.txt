@@ -1,1 +1,19 @@
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype
+
+https://kangax.github.io/compat-table/es6/
+
+Module Lodder: they will load the complete dependenty graph. Loding  will be happen from botom to top
+execution form top to bottom. SystemJs is a Module Lodder.
+
+Module also had pratterns like CommonJs pattern, es2015 paern, AMD pattern, UMD pattern.
+
+es2015--> Import export 
+AMD--> define
+
+Modules can be loded by 2 ways Eager loding, Lazy loding.
+
+npm install
+--------------
+it will create a node_module folder and it will keep the moduel in those folder.
+cutom moduel are Import with "./"
+download moduels will be Import 
