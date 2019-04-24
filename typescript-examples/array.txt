@@ -2,6 +2,10 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 https://kangax.github.io/compat-table/es6/
 
+https://angular.io/guide/styleguide
+
+https://www.udemy.com/courses/search/?q=pravinkumar&src=sac&kw=prav
+
 Module Lodder: they will load the complete dependenty graph. Loding  will be happen from botom to top
 execution form top to bottom. SystemJs is a Module Lodder.
 
