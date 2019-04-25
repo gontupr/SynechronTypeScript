@@ -2,6 +2,12 @@
 <br>
 <h6 [innerText]="subTitle"></h6>
 <br>
+<div class="container form-group">
+  <label for="inputSearchChar">Search Events</label>
+  <input type="search" class="form-control" id="inputSearchChar" [(ngModel)]="searchChar"
+  placeholder="Event Name / charactess">
+</div>
+<br>
 <table class="table table-hover table-striped" *ngIf="events && events.length>0;else noDataTemplate">
   <thead>
     <tr>
@@ -13,10 +19,10 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let event of events">
-      <td><span [innerText]="event.eventCode"></span></td>
-      <td><span [innerText]="event.eventName"></span></td>
-      <td><span [innerText]="event.startDate"></span></td>
+    <tr *ngFor="let event of events | filterBy:searchChar">
+      <td><span [innerText]="event.eventCode | lowercase"></span></td>
+      <td><span [innerText]="event.eventName | uppercase"></span></td>
+      <td><span [innerText]="event.startDate | date:'dd:MMM:yyyy'"></span></td>
       <td><span [innerText]="event.fees"></span></td>
       <td><button class="btn btn-success" (click) = "onEventSelection(event)">Show Details</button></td>
     </tr>

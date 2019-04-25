@@ -6,6 +6,8 @@ https://angular.io/guide/styleguide
 
 https://www.udemy.com/courses/search/?q=pravinkumar&src=sac&kw=prav
 
+https://chrome.google.com/webstore/search/augury
+
 Module Lodder: they will load the complete dependenty graph. Loding  will be happen from botom to top
 execution form top to bottom. SystemJs is a Module Lodder.
 
