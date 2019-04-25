@@ -1,0 +1,27 @@
+<h1 [innerText]="title"></h1>
+<br>
+<h6 [innerText]="subTitle"></h6>
+<br>
+<table class="table table-hover table-striped" *ngIf="events && events.lenth>0;else noDataTemplate">
+  <thead>
+    <tr>
+      <th>Event Code</th>
+      <th>Event Name</th>
+      <th>Event Date</th>
+      <th>Fees</th>
+      <th>Show Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let evetn of events">
+      <td><span [innerText]="evetn.eventCode"></span></td>
+      <td><span [innerText]="evetn.eventName"></span></td>
+      <td><span [innerText]="evetn.startDate"></span></td>
+      <td><span [innerText]="evetn.fees"></span></td>
+      <td><bttton class="btn btn-success">Show Details</bttton></td>
+    </tr>
+  </tbody>
+</table>
+<ng-template #noDataTemplate>
+  <h3>There are no events found! Please try after some time</h3>
+</ng-template>

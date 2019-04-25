@@ -16,9 +16,15 @@
             <td [innerText]="employee.city"></td>
             <td [innerText]="employee.email"></td>
             <td [innerText]="employee.phone"></td>
-            <td></td>
+            <td> 
+                <button  (click)="onEventSelection(employee)" class="btn btn-primary">Details</button>
+            </td>
         </tr>
     </tbody>
 </table>
 
 <ng-template #noDataTemplate><h3>Employee records not found</h3></ng-template>
+
+<div *ngIf="selectedEmployee">
+<employee-details [employee]= "selectedEmployee"></employee-details>
+</div>

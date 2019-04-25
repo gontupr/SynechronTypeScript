@@ -14,6 +14,11 @@ export class EmployesListComponent
     }
 title: string = "Synechron Employees List";
 subTitle: string = "Hyderabad Emp";
+selectedEmployee: Employee;
+onEventSelection(employee: Employee):void{
+    this.selectedEmployee = employee;
+    console.log(this.selectedEmployee);
+}
 employees: Employee[] = [
     {
         employeeId: 100,
@@ -25,7 +30,7 @@ employees: Employee[] = [
         email: "manish.kaushik@synechron.com",
         platform: "Database",
         skillSets: "DBA",
-        avatar: "images/noimage.jpg"
+        avatar: "images/noimage.png"
     },
     {
         employeeId: 101,
@@ -37,7 +42,7 @@ employees: Employee[] = [
         email: "alisha.c@synechron.com",
         platform: "Java Full Stack",
         skillSets: "Java, Spring, Hybernet",
-        avatar: "images/noimage.jpg"
+        avatar: "images/noimage.png"
     },
     {
         employeeId: 102,
@@ -49,7 +54,7 @@ employees: Employee[] = [
         email: "ali.abbas@synechron.com",
         platform: "Database",
         skillSets: "Developer - SQL/Oracle/MongoDB",
-        avatar: "images/noimage.jpg"
+        avatar: "images/noimage.png"
     },
     {
         employeeId: 103,
@@ -61,7 +66,7 @@ employees: Employee[] = [
         email: "anjala.johns@synechron.com",
         platform: "Open Source",
         skillSets: "JavaScript Full Stack",
-        avatar: "images/noimage.jpg"
+        avatar: "images/noimage.png"
     },
     {
         employeeId: 104,
@@ -73,7 +78,7 @@ employees: Employee[] = [
         email: "pravinkumar.r.d@synechron.com",
         platform: "Microsoft/Open Source",
         skillSets: "DBA",
-        avatar: "images/noimage.jpg"
+        avatar: "images/noimage.png"
     }
 ];
 }
