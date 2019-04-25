@@ -2,7 +2,7 @@
 <br>
 <h6 [innerText]="subTitle"></h6>
 <br>
-<table class="table table-hover table-striped" *ngIf="events && events.lenth>0;else noDataTemplate">
+<table class="table table-hover table-striped" *ngIf="events && events.length>0;else noDataTemplate">
   <thead>
     <tr>
       <th>Event Code</th>
@@ -13,15 +13,19 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let evetn of events">
-      <td><span [innerText]="evetn.eventCode"></span></td>
-      <td><span [innerText]="evetn.eventName"></span></td>
-      <td><span [innerText]="evetn.startDate"></span></td>
-      <td><span [innerText]="evetn.fees"></span></td>
-      <td><bttton class="btn btn-success">Show Details</bttton></td>
+    <tr *ngFor="let event of events">
+      <td><span [innerText]="event.eventCode"></span></td>
+      <td><span [innerText]="event.eventName"></span></td>
+      <td><span [innerText]="event.startDate"></span></td>
+      <td><span [innerText]="event.fees"></span></td>
+      <td><button class="btn btn-success" (click) = "onEventSelection(event)">Show Details</button></td>
     </tr>
   </tbody>
 </table>
 <ng-template #noDataTemplate>
   <h3>There are no events found! Please try after some time</h3>
 </ng-template>
+
+<div *ngIf="selectedEvent">
+<event-deails [event] = "selectedEvent"> </event-deails>
+</div>

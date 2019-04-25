@@ -9,6 +9,11 @@ export class EventsListComponent implements OnInit {
 
   title:string = "Synechron Future Events List";
   subTile:string= "Published by synechron HR!";
+  selectedEvent:Event;
+  onEventSelection(event:Event):void
+  {
+this.selectedEvent = event
+  }
   events:Event[] = [
         {
             eventId: 1001,
