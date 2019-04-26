@@ -1,0 +1,22 @@
+Why Angular?
+
+1) It is a one framework for multi-platform application development
+2) It supports multiple languages [ES5/ES2015/TypeScript/Dart]
+3) Build SPA [Single Page Application]
+4) Angular is a Modular Framework
+5) Angular Framework follows Component Architecture
+6) Component - Extending Browser/HTML vocabulary [WebComponent Development]
+7) You can create applications in modular way
+8) Eager Loading and Lazy Loading of the modules
+9) Rich Data binding support [One-way(Source-to-destination or destination to source), Two-way data binding]
+10) Http Support [Http Actions - GET/PUT/POST/DELETE]
+11) In-built Dependency Injection
+12) Custom Services in Angular Application
+13) Rich Animations
+14) Routing
+15) RxJS [Reactive Extensions JavaScript Library]
+16) Uni-direction Data Flow
+17) Change Detection Cycle
+18) Zone.js
+19) Use Angular components outside Angular Application [Angular Elements]
+20) Data Transformation [Pipes]

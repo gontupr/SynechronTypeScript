@@ -22,7 +22,12 @@ this.selectedEvent = event
   events:Event[] ;
 
   ngOnInit() {
-    this.events = this._eventsService.getAllEvents();
+    
+    this._eventsService.getAllEvents().subscribe(
+      data=>this.events= data,
+      err=>console.log(err),
+      ()=>console.log("Service call is completed!")
+    );
   }
 
 }

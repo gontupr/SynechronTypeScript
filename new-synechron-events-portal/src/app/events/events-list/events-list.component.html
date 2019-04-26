@@ -1,0 +1,34 @@
+<h1 [innerText]="title"></h1>
+<hr>
+<h6 [innerText]="subTitle"></h6>
+<hr>
+<div class="container form-group">
+  <label for="inputSearchChar">Search Events</label>
+  <input type="search" class="form-control" id="inputSearchChar" [(ngModel)]="searchChar" placeholder="Event Name / characters">
+</div>
+<br>
+<table class="table table-hover table-striped" *ngIf="events && events.length>0;else noDataTemplate">
+  <thead>
+    <tr>
+      <th>Event Code</th>
+      <th>Event Name</th>
+      <th>Start Date</th>
+      <th>Fees</th>
+      <th>Show Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let event of events | filterBy:searchChar">
+      <td><span [innerText]="event.eventCode | lowercase"></span></td>
+      <td><span [innerText]="event.eventName | uppercase"></span></td>
+      <td><span [innerText]="event.startDate | date:'dd-MMM-yyyy HH:MM'"></span></td>
+      <td><span [innerText]="event.fees | currency:'INR'"></span></td>
+      <td>
+        <button class="btn btn-success" [routerLink]="['/events', event.eventId]">Show Details</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<ng-template #noDataTemplate>
+  <h3>There are no events found! Please try after some time</h3>
+</ng-template>
